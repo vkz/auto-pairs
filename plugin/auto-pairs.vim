@@ -578,5 +578,8 @@ endfunction
 inoremap <silent> <SID>AutoPairsReturn <C-R>=AutoPairsReturn()<CR>
 imap <script> <Plug>AutoPairsReturn <SID>AutoPairsReturn
 
-
-au BufEnter * :call AutoPairsTryInit()
+" Do not enable Auto Pairs everywhere! Let the user control it with autocmd, e.g.:
+" augroup AutoPairsGroup
+"   au!
+"   au BufEnter *.c,*.h :call AutoPairsTryInit()
+" augroup END
